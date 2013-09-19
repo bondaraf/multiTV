@@ -223,8 +223,8 @@ function SetUrl(url, width, height, alt) {
 				var thumbName = thumbPath.pop();
 				var thumbId = name.replace(/^(.*?)(\d*)$/, '#$1preview$2');
 				if (thumbName !== '') {
-					thumbPath[0] = '/assets/.thumbs';
-					el.find(thumbId).html('<img src="'+thumbPath.join("/")+'/'+thumbName+'" />');
+					thumbPath[0] = '/assets/snippets/phpthumb/resize.php?&src=';
+					el.find(thumbId).html('<img src="'+thumbPath[0]+path+'&w=96" />');
 				} else {
 					el.find(thumbId).html('');
 				}
